@@ -1,0 +1,25 @@
+
+package prototype;
+import java.util.Scanner;
+
+public class PrototypePatternEx {
+    
+    
+    
+    public static void main(String[] args) {
+    Chevrolet chevrolet = new Chevrolet();
+    
+    Scanner teclado = new Scanner(System.in);
+    System.out.println("Digite1 ");
+    float a1 = teclado.nextFloat();
+    System.out.println("Digite1 ");
+    float b1 = teclado.nextFloat();
+    
+    Carro ChevroletNovo = chevrolet.clonar();
+    ChevroletNovo.setValorCompra(a1);
+    Carro ChevroletUsado = chevrolet.clonar();
+    ChevroletUsado.setValorCompra(b1);
+ 
+    System.out.println(ChevroletNovo.exibirInfo());
+    System.out.println(ChevroletUsado.exibirInfo());
+}}
