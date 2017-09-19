@@ -1,0 +1,27 @@
+
+package prototype;
+
+
+
+public class Chevrolet extends Carro {
+ 
+    protected Chevrolet(Chevrolet Chevrolet) {
+        this.valorCompra = Chevrolet.getValorCompra();
+    }
+ 
+    public Chevrolet() {
+        valorCompra = 0.0;
+    }
+ 
+    @Override
+    public String exibirInfo() {
+        return "Modelo: Fiesta\nMontadora: Ford\n" + "Valor: R$"
+                + getValorCompra();
+    }
+ 
+    @Override
+    public Carro clonar() {
+        return new Chevrolet(this);
+    }
+ 
+}
